@@ -1,26 +1,133 @@
 import React, { useContext } from "react";
-import { home } from "./APIs/ApiHome";
+import { one } from "./Api";
 
 const Home = () => {
-  const [dataHome, setDataHome] = useContext(home);
+  const [data] = useContext(one);
   return (
     <>
-      {" "}
-      <div className="contentPage">
-        {dataHome.map((item) => {
-          return (
-            <a href={item.url}>
-              <div className="card">
-                <img src={item.urlToImage} alt="image"></img>
-                <p>{item.title}</p>
-                <p>{item.description}</p>
-                <p>{item.author}</p>
-              </div>
-            </a>
-          );
-        })}
+      <div className="box1">
+        <img
+          src={
+            "https://th.bing.com/th/id/OIF.kRJuo2IzuIwI3j5Mu9z9XQ?pid=ImgDet&rs=1"
+          }
+          alt={""}
+          height="400px"
+        />
+        <div className="box2">
+          <img
+            src={
+              "https://qph.fs.quoracdn.net/main-qimg-bfa9bbf14a4f404c4d6f5c26c4fe4a99-c"
+            }
+            alt={""}
+            height={"280px"}
+          />
+          <img
+            src={
+              " https://th.bing.com/th/id/OIP.b-10t5akOlGGO0pBQQnWpQAAAA?w=185&h=183&c=7&r=0&o=5&pid=1.7"
+            }
+            alt={""}
+          />
+        </div>
       </div>
-      ;
+      <p>`</p>
+      <h2>THE LATEST NEWS</h2>
+      <div className="lin"></div>
+      <div className="latest">
+        <div className="card">
+          <img className="im" src={data[0].ImageAsset} alt="" height="200px" />
+          <div className="data">
+            <h6> {data[0].PublishedDate} </h6>
+            <h6> {data[0].Title} </h6>
+            <h6> {data[0].BlogContent} </h6>
+            <h6> {data[0].Likes} </h6>
+          </div>
+        </div>
+        <div>
+          <img
+            src={
+              "https://th.bing.com/th/id/OIP.5_rGNVqLF0Up2ykYxHD0VAHaF7?pid=ImgDet&rs=1"
+            }
+            alt={""}
+            height={"200px"}
+          />
+        </div>
+      </div>
+      <p>`</p>
+      <p>`</p>
+      <h2>THE LATEST ARTICLE</h2>
+      <div className="lin"></div>
+      <div className="latest">
+        <div className="card">
+          <img className="im" src={data[14].ImageAsset} alt="" height="200px" />
+          <div className="data">
+            <h6> {data[14].PublishedDate} </h6>
+            <h6> {data[14].Title} </h6>
+            <h6> {data[14].BlogContent} </h6>
+            <h6>
+              <h6> {data[14].Likes} </h6>
+            </h6>
+          </div>
+        </div>
+        <div>
+          <img
+            src={
+              "https://th.bing.com/th/id/OIP._9WXOes4d80ysQz90znniQHaJB?pid=ImgDet&rs=1"
+            }
+            alt={""}
+            height="200px"
+          />
+        </div>
+        <div className="card">
+          <img className="im" src={data[5].ImageAsset} alt="" height="200px" />
+          <div className="data">
+            <h6> {data[5].PublishedDate} </h6>
+            <h6> {data[5].Title} </h6>
+            <h6> {data[5].BlogContent} </h6>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src={
+              "https://i.pinimg.com/originals/f0/0e/29/f00e29d6e8fa502fb901f63d71e94734.jpg"
+            }
+            alt={""}
+            height={"300px"}
+          />
+        </div>
+      </div>
+
+      <h2>THE LATEST STORIES</h2>
+      <div className="lin"></div>
+      <div className="art">
+        <div className="card">
+          <img className="im" src={data[4].ImageAsset} alt="" height="200px" />
+          <div className="data">
+            <h6> {data[4].PublishedDate} </h6>
+            <h6> {data[4].Title} </h6>
+            <h6> {data[4].BlogContent} </h6>
+            <h6>
+              <h6> {data[4].Likes} </h6>
+            </h6>
+          </div>
+        </div>
+        <div className="tour">
+          <img
+            src={
+              "https://www.tripsavvy.com/thmb/PAqt9lwla9-Zvj7E9LeAcwM8bJs=/4125x2856/filters:fill(auto,1)/KazanCathedral2-254d95159196474b82fa87f962687ec6.jpg"
+            }
+            alt={""}
+            height={"300px"}
+          />
+          <img
+            src={
+              "https://fthmb.tqn.com/oNaNMUMdTrpqlJ8uv1LD4tAgguM=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/shore-temple-640319518-58e3eaf25f9b58ef7e113e1f.jpg"
+            }
+            alt={""}
+            height={"300px"}
+          />
+        </div>
+      </div>
     </>
   );
 };
