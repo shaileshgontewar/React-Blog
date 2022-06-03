@@ -8,7 +8,7 @@ const Home = () => {
       <div className="box1">
         <img
           src={
-            "https://th.bing.com/th/id/OIF.kRJuo2IzuIwI3j5Mu9z9XQ?pid=ImgDet&rs=1"
+            "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202204/olaa.jpg?ikxK_8nil6CxMVSrgvE5I_lRm1MGLIdr&size=770:433"
           }
           alt={""}
           height="400px"

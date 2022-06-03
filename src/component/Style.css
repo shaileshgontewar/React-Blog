@@ -43,11 +43,7 @@
 }
 
 /* !==================================================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 .cont {
   text-align: center;
   /* height: 100vh; */
@@ -84,19 +80,10 @@ li {
   display: grid;
   width: 200px;
 }
-/* .trend{
-  top: 300px;
-left: 242px;
-width: 958px;
-height: 606px;
-background: transparent url('') 0% 0% no-repeat padding-box;
-box-shadow: 0px 5px 10px #0000001A;
-border-radius: 7px;
-opacity: 1;
-} */
+
 .card {
   height: 200px;
-  width: 900px;
+  width: 800px;
   color: black;
   display: grid;
   grid-template-columns: auto auto;
@@ -115,7 +102,7 @@ opacity: 1;
 }
 .cards {
   width: 900px;
-  height: 500px;
+  height: 600px;
   display: flexbox;
 }
 .car {

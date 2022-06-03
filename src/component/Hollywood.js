@@ -7,7 +7,7 @@ export default function Hollywood() {
   return (
     <div>
       <div>
-        <h1>--------HOLLYWOOD-------</h1>
+        <h1>HOLLYWOOD</h1>
       </div>
       <div className="car">
         <div className="cards">
@@ -15,7 +15,7 @@ export default function Hollywood() {
           <div className="card">
             <img
               className="im"
-              src={data[0].ImageAsset}
+              src={data[17].ImageAsset}
               alt=""
               height="200px"
             />

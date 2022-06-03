@@ -7,7 +7,7 @@ export default function Bollywood() {
   return (
     <>
       <div>
-        <h1>--------BOLLYWOOD-------</h1>
+        <h1>BOLLYWOOD</h1>
       </div>
       <div className="car">
         <div className="cards">

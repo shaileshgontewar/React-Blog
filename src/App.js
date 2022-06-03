@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./component/Navbar";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Food from "./component/food";
 import Bollywood from "./component/bollywood";
 import Home from "./component/Home";
@@ -16,6 +16,7 @@ function App() {
         <Navbar />
         <div className="App">
           <Routes>
+            <Route path="/" element={<Navigate to="/home" />} />
             <Route path="/home" element={<Home />} />
             <Route path="/bollywood" element={<Bollywood />} />
             <Route path="/technology" element={<Technology />} />
