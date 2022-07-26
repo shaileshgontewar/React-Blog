@@ -1,0 +1,11 @@
+li:hover{
+    border-bottom: 2px solid yellow;
+    font-weight: bold;
+}
+#siren{
+    font-size: 70px;
+}
+
+#the{
+    font-size: 40px;
+}

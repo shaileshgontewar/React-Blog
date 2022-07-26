@@ -1,33 +1,34 @@
-import "./App.css";
-import Navbar from "./component/Navbar";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Food from "./component/food";
-import Bollywood from "./component/bollywood";
-import Home from "./component/Home";
-import Technology from "./component/technology";
-import Hollywood from "./component/Hollywood";
-import Fitness from "./component/Fitness";
-import Api from "./component/Api";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "./Component/Header";
+import Nav from "./Component/Nav";
+import Home from "./Pages/Home"
+import Hollywood from "./Pages/Hollywood"
+import Bollywood from "./Pages/Bollywood"
+import Technology from "./Pages/Technology"
+import Fitness from "./Pages/Fitness"
+import Food from "./Pages/Food"
+import SingleBlogPage from "./Pages/SingleBlogPage";
+import './Style.css'
 
 function App() {
   return (
-    <Api>
+    <div className="App">
+      <Header />
       <BrowserRouter>
-        <Navbar />
-        <div className="App">
-          <Routes>
-            <Route path="/" element={<Navigate to="/home" />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/bollywood" element={<Bollywood />} />
-            <Route path="/technology" element={<Technology />} />
-            <Route path="/hollywood" element={<Hollywood />} />
-            <Route path="/fitness" element={<Fitness />} />
-            <Route path="/food" element={<Food />} />
-            <Route component={() => 404} />
-          </Routes>
-        </div>
+      <Nav /> 
+      <Routes>
+        <Route path="/" element = {<Home />} />
+        <Route path="/bollywood" element = {<Bollywood />} />
+        <Route path="/hollywood" element = {<Hollywood />} />
+        <Route path="/technology" element = {<Technology />} />
+        <Route path="/fitness" element = {<Fitness />} />
+        <Route path="/food" element = {<Food />} />
+        <Route path=":category/:articleid" element = {<SingleBlogPage/>}/>
+      </Routes>
       </BrowserRouter>
-    </Api>
+
+
+    </div>
   );
 }
 
